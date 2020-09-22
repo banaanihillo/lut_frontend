@@ -1,0 +1,23 @@
+{
+  "name": "lut_frontend",
+  "version": "1.0.0",
+  "description": "Responsive styles on a static front end",
+  "main": "index.js",
+  "scripts": {
+    "sass": "cross-env node-sass scss/ -o dist/css/ --recursive --usePolling --polling-interval 500",
+    "hello": "echo Hello!"
+  },
+  "scriptsComments": {
+    "sass": "That -o flag means output, I think",
+    "moreInfo": "Watch is short for -w",
+    "help": "Running that script outputs something to dist/css"
+  },
+  "author": "banaanihillo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.*"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
