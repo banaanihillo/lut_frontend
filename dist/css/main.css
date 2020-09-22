@@ -1,3 +1,28 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background: black;
-  color: deeppink; }
+  color: magenta;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.large-heading,
+  h2.large-heading,
+  h3.large-heading {
+    font-size: 4rem; }
+  h1.small-heading,
+  h2.small-heading,
+  h3.small-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+    background: #333333; }
+
+a {
+  text-decoration: none; }

@@ -1,7 +1,35 @@
 $primary-color: black;
 $secondary-color: deeppink;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: $primary-color;
-    color: $secondary-color;
+    color: magenta;
+    height: 100%;
+    margin: 0;
+    line-height: 1.5;    
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.large-heading {
+        font-size: 4rem;
+    }
+
+    &.small-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem;
+        background: lighten($primary-color, 20%);
+    }
+}
+
+a {
+    text-decoration: none;
 }
