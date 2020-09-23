@@ -1,0 +1,45 @@
+.menu-button {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+
+    .button-line {
+        width: 30px;
+        height: 5px;
+        margin: 0 0 5px 0;
+        background: darkmagenta;
+    }
+
+    //Just show an 'x' with no extra gimmicks, alright
+    &.close-menu {
+        transform: rotate(45deg);
+
+        .button-line {
+            &:nth-child(1) {
+                background: magenta;
+                /*Looks like the margin affects this one as well,
+                so the end result seems to be a bit off the center.
+                Apparently the transform makes the translation apply at that point,
+                essentially calculating the translation after the rotation of 45 degrees,
+                so the calculation of where the lines should be is somewhat complex
+
+                Trial and error,
+                with addition or subtraction of one pixel here and there,
+                should result in a pleasant outcome
+                */
+                transform: rotate(90deg) translate(10px, 2px);
+            }
+
+            &:nth-child(2) {
+                background: black;
+            }
+
+            &:nth-child(3) {
+                background: magenta;
+                transform: translate(-1px, -10px);
+            }
+        }
+    }
+
+}
