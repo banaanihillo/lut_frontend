@@ -1,5 +1,7 @@
 .menu-button {
-    position: fixed;
+    //position: fixed;
+    position: absolute;
+    z-index: 3;
     right: 30px;
     top: 30px;
     cursor: pointer;
@@ -8,16 +10,16 @@
         width: 30px;
         height: 5px;
         margin: 0 0 5px 0;
-        background: darkmagenta;
+        background: magenta;
     }
 
     //Just show an 'x' with no extra gimmicks, alright
-    &.close-menu {
+    &.menu-button-hidden {
         transform: rotate(45deg);
 
         .button-line {
             &:nth-child(1) {
-                background: magenta;
+                background: darkmagenta;
                 /*Looks like the margin affects this one as well,
                 so the end result seems to be a bit off the center.
                 Apparently the transform makes the translation apply at that point,
@@ -36,10 +38,72 @@
             }
 
             &:nth-child(3) {
-                background: magenta;
-                transform: translate(-1px, -10px);
+                background: darkmagenta;
+                transform: translate(-1.5px, -10px);
             }
         }
     }
 
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+
+    &.menu-visible {
+        visibility: visible;
+    }
+    
+    &-branding,
+    &-navigation {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        //overflow: hidden;
+    }
+    
+    &-navigation {
+        margin: 0;
+        padding: 0;
+        background: $primary-color;
+        list-style: none;
+    }
+    
+    &-branding {
+        background: lighten($primary-color, 10%);
+        //opacity: 0.5;
+
+        .portrait {
+            width: 200px;
+            height: 200px;
+            background: $secondary-color;
+
+            &-template {
+                color: $primary-color;
+                text-align: center;
+            }
+        }
+    }
+
+    .navigation-link {
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+        padding: 0.5rem;
+        font-weight: 600;
+    }
+
+    .navigation-item {
+        &.current-page {
+            a {
+                color: $secondary-color;
+            }
+        }
+    }
 }

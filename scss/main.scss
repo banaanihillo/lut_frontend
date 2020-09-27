@@ -1,14 +1,15 @@
 @import "config";
 @import "menu";
+@import "screen-size";
 
-/*
+
 * {
     box-sizing: border-box;
 }
-*/
+//
 
 body {
-    @include background;
+    //@include background;
     background: $primary-color;
     color: magenta;
     height: 100%;
@@ -27,18 +28,20 @@ h3 {
     }
 
     &.small-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem;
+        margin-bottom: 1rem;
+        padding: 0.2rem 1rem;
         background: lighten($primary-color, 20%);
     }
 }
 
 header {
-    /*
+    //position: absolute;
     position: fixed;
 
     z-index: 2;
-    */
+    //puts the header on top of the background,
+    //so the lighter, dark gray background stays behind the menu links
+    
     width: 100%;
 }
 
@@ -61,13 +64,17 @@ a {
 }
 
 main {
-    padding: 4rem;
+    padding: 2rem;
     height: 100%;
+
+    .lorem-ipsum {
+        background-color: darkslategray;
+    }
     
     &#home {
-        //overflow: hidden;
+        overflow: hidden;
         h1 {
-            margin-top: 20vh;
+            margin-top: 10vh;
         }
     }
     

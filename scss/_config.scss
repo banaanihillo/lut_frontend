@@ -1,6 +1,6 @@
 $primary-color: black;
 $secondary-color: deeppink;
-$background-opacity: 0.2;
+$background-opacity: 0.6;
 
 @mixin background {
     /*
@@ -19,6 +19,8 @@ $background-opacity: 0.2;
         right: 0;
         width: 100%;
         height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity)
         /*
         Sets the background to the primary color,
         adjusted by the given opacity parameter.
@@ -36,5 +38,32 @@ $background-opacity: 0.2;
         Kind of a nice-to-know gimmick,
         unnecessary for now though
         */
+    }
+}
+
+@mixin smallScreen {
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}
+//makes this stuff apply to both small and medium screens
+@mixin mediumScreen {
+    @media screen and (max-width: 940px) {
+        @content;
+    }
+}
+//and if there's stuff that needs to be handled separately for large and huge screens,
+@mixin largeScreen {
+    @media screen
+        and (min-width: 941px)
+        and (max-width: 1600px) {
+            @content;
+        }
+}
+//this will separate these two cases,
+//each having their own unique properties
+@mixin hugeScreen {
+    @media screen and (min-width: 1601px) {
+        @content;
     }
 }

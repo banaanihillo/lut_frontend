@@ -10,61 +10,65 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu-button">
-            <div class="button-line"></div>
-            <div class="button-line"></div>
-            <div class="button-line"></div>
-        </div>
 
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait">
-                    <!-- Nope, nothin' here -->
-                </div>
+    <div id = "overlay">
+
+        <header>
+            <div class="menu-button">
+                <div class="button-line"></div>
+                <div class="button-line"></div>
+                <div class="button-line"></div>
             </div>
+            
+            <nav class="menu">
+                <div class="menu-branding">
+                    <div class="portrait">
+                        <p class = "portrait-template">
+                            This is an image template
+                        </p>
+                    </div>
+                </div>
 
-            <ul class="menu-navigation">
-                <li class="navigation-item">
-                    <a href="/home" class="navigation-link">
-                        Home
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="/projects" class="navigation-link">
-                        Projects
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="/about" class="navigation-link">
-                        About
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="/contact" class="navigation-link">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                <ul class="menu-navigation">
+                    <li class="navigation-item current-page">
+                        <a href="/index.html" class="navigation-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="/projects" class="navigation-link">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="/about" class="navigation-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="/contact" class="navigation-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+    </div>
 
     <main id = "home">
         <h1 class="large-heading">
-            Hello, hello!
+            Hello, <span class="text-secondary">
+                you!
+            </span>
         </h1>
         <h2 class="small-heading">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            <span class="text-secondary">
-                Modi quis eius rem nostrum voluptatem id enim distinctio,
-            </span>
+        </h2>
+        <div class = "lorem-ipsum">
             expedita odio deleniti rerum pariatur!
             Nesciunt, molestiae nam aliquid optio assumenda ipsum magni?
-        </h2>
-
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae vero accusantium incidunt fugiat earum pariatur quaerat quidem. Quam, error voluptatibus. Velit eaque dolorum, asperiores tempora soluta consectetur reiciendis labore maxime?
-        </p>
+        </div>
     </main>
     
     <script src="js/main.js"></script>

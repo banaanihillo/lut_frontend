@@ -1,0 +1,56 @@
+@include smallScreen {
+    main {
+        &#home {
+            h1 {
+                color: hotpink;
+                //padding-top: 5vh;
+            }
+        }
+    }
+}
+
+@include mediumScreen {
+    main {
+        align-items: center;
+        text-align: center;
+        
+        .large-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-navigation,
+    div.menu-branding {
+        float: none;
+        //stretch the menu out,
+        //so the main page doesn't leak out from underneath the menu
+        width: 100%;
+        min-height: 0;
+    }
+
+    .menu-navigation {
+        height: 80vh;
+        font-size: 1.5rem;
+        //flex-wrap: nowrap;
+        //overflow: hidden;
+        //line-height: 0.5;
+    }
+
+    .menu-branding {
+        height: 20vh;
+
+        .portrait {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+@include largeScreen {
+    //No large screens here, I guess
+}
+
+@include hugeScreen {
+    //None of these either
+}

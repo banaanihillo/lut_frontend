@@ -1,4 +1,5 @@
 const menuButton = document.querySelector(".menu-button");
+
 const menu = document.querySelector(".menu")
 const menuBranding = document.querySelector(".menu-branding")
 const menuNavigation = document.querySelector(".menu-navigation")
@@ -9,27 +10,29 @@ let showMenu = false;
 
 const toggleMenu = () => {
     if (!showMenu) {
-        menuButton.classList.add("close-menu");
-        menu.classList.add("open");
-        menuBranding.classList.add("open");
-        menuNavigation.classList.add("open");
+        menuButton.classList.add("menu-button-hidden");
+        
+        menu.classList.add("menu-visible");
+        menuBranding.classList.add("menu-visible");
+        menuNavigation.classList.add("menu-visible");
 
         navigationItems.forEach(navigationItem =>
-            navigationItem.classList.add("open")
+            navigationItem.classList.add("menu-visible")
         )
-
+        
         showMenu = true;
 
     } else {
-        menuButton.classList.remove("close-menu");
-        menu.classList.remove("open");
-        menuBranding.classList.remove("open");
-        menuNavigation.classList.remove("open");
+        menuButton.classList.remove("menu-button-hidden");
+        
+        menu.classList.remove("menu-visible");
+        menuBranding.classList.remove("menu-visible");
+        menuNavigation.classList.remove("menu-visible");
 
         navigationItems.forEach(navigationItem =>
-            navigationItem.classList.remove("open")
+            navigationItem.classList.remove("menu-visible")
         )
-
+        
         showMenu = false;
 
     }
