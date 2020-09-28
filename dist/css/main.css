@@ -52,13 +52,6 @@
     list-style: none; }
   .menu-branding {
     background: #1a1a1a; }
-    .menu-branding .portrait {
-      width: 200px;
-      height: 200px;
-      background: deeppink; }
-      .menu-branding .portrait-template {
-        color: black;
-        text-align: center; }
   .menu .navigation-link {
     display: inline-block;
     position: relative;
@@ -67,31 +60,6 @@
     font-weight: 600; }
   .menu .navigation-item.current-page a {
     color: deeppink; }
-
-@media screen and (max-width: 520px) {
-  main#home h1 {
-    color: hotpink; } }
-
-@media screen and (max-width: 940px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .large-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-navigation,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-  .menu-navigation {
-    height: 80vh;
-    font-size: 1.5rem; }
-  .menu-branding {
-    height: 20vh; }
-    .menu-branding .portrait {
-      width: 100px;
-      height: 100px; } }
 
 * {
   box-sizing: border-box; }
@@ -143,3 +111,72 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 10vh; }
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  background: deeppink; }
+  .portrait-template {
+    color: black;
+    text-align: center; }
+
+.information {
+  display: grid;
+  grid-template-areas: "portrait-template additional-information additional-information" "grid-item-1 grid-item-2 grid-item-3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; }
+  .information .portrait-template {
+    grid-area: portrait-template;
+    justify-self: center; }
+  .information .additional-information {
+    grid-area: additional-information; }
+  .information .grid-item-1 {
+    grid-area: grid-item-1; }
+  .information .grid-item-2 {
+    grid-area: grid-item-2; }
+  .information .grid-item-3 {
+    grid-area: grid-item-3; }
+  .information .grid-item-1,
+  .information .grid-item-2,
+  .information .grid-item-3 {
+    background: #1a1a1a;
+    color: deeppink;
+    border: #ad005d 2px solid;
+    padding-left: 0.2rem; }
+
+footer {
+  text-align: center;
+  background: #c7006b;
+  color: black;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+
+@media screen and (max-width: 520px) {
+  main h1 {
+    color: hotpink; } }
+
+@media screen and (max-width: 940px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .large-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-navigation,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+  .menu-navigation {
+    height: 80vh;
+    font-size: 1.5rem; }
+  .menu-branding {
+    height: 20vh; }
+    .menu-branding .portrait {
+      width: 100px;
+      height: 100px; }
+  .information {
+    grid-template-areas: "portrait-template" "additional-information" "grid-item-1" "grid-item-2" "grid-item-3";
+    grid-template-columns: 1fr; } }

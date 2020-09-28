@@ -78,17 +78,7 @@
     &-branding {
         background: lighten($primary-color, 10%);
         //opacity: 0.5;
-
-        .portrait {
-            width: 200px;
-            height: 200px;
-            background: $secondary-color;
-
-            &-template {
-                color: $primary-color;
-                text-align: center;
-            }
-        }
+        //
     }
 
     .navigation-link {

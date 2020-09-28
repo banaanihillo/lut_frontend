@@ -1,13 +1,13 @@
 @include smallScreen {
     main {
-        &#home {
-            h1 {
-                color: hotpink;
-                //padding-top: 5vh;
-            }
+
+        h1 {
+            color: hotpink;
+            //padding-top: 5vh;
         }
     }
 }
+
 
 @include mediumScreen {
     main {
@@ -44,6 +44,16 @@
             width: 100px;
             height: 100px;
         }
+    }
+
+    .information {
+        grid-template-areas:
+            "portrait-template"
+            "additional-information"
+            "grid-item-1"
+            "grid-item-2"
+            "grid-item-3";
+        grid-template-columns: 1fr;
     }
 }
 

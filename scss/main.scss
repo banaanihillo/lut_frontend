@@ -1,7 +1,8 @@
 @import "config";
 @import "menu";
-@import "screen-size";
+//
 
+$footer-height: 30px;
 
 * {
     box-sizing: border-box;
@@ -65,6 +66,7 @@ a {
 
 main {
     padding: 2rem;
+    //min-height: calc(100vh - $footer-height);
     height: 100%;
 
     .lorem-ipsum {
@@ -79,3 +81,67 @@ main {
     }
     
 }
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    background: $secondary-color;
+
+    &-template {
+        color: $primary-color;
+        text-align: center;
+    }
+
+    //grid-area: portrait-template;
+}
+
+.information {
+    display: grid;
+    grid-template-areas:
+    "portrait-template additional-information additional-information"
+    "grid-item-1 grid-item-2 grid-item-3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    .portrait-template {
+        grid-area: portrait-template;
+        justify-self: center;
+    }
+
+    .additional-information {
+        grid-area: additional-information;
+    }
+    
+    .grid-item-1 {
+        grid-area: grid-item-1;
+    }
+    
+    .grid-item-2 {
+        grid-area: grid-item-2;
+    }
+    
+    .grid-item-3 {
+        grid-area: grid-item-3;
+    }
+    
+    .grid-item-1,
+    .grid-item-2,
+    .grid-item-3 {
+        background: lighten($primary-color, 10%);
+        color: $secondary-color;
+        border: darken($secondary-color, 20%) 2px solid;
+        padding-left: 0.2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    background: darken($secondary-color, 15%);
+    color: $primary-color;
+    height: $footer-height;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@import "screen-size";
