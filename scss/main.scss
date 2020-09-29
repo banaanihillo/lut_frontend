@@ -3,6 +3,8 @@
 //
 
 $footer-height: 30px;
+$image-width: 200px;
+$image-height: 200px;
 
 * {
     box-sizing: border-box;
@@ -83,8 +85,8 @@ main {
 }
 
 .portrait {
-    width: 200px;
-    height: 200px;
+    width: $image-width;
+    height: $image-height;
     background: $secondary-color;
 
     &-template {
@@ -143,5 +145,45 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.my-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+
+    .project-image {
+        color: violet;
+        background: darken($secondary-color, 30%);
+        border: 2px darkorange solid;
+
+        &:hover {
+            border: 2px orange solid;
+        }
+    }
+
+    //makes all the images slot into the center of each individual cell,
+    //essentially having the same effect as space-between on the container
+    .project-item {
+        justify-self: center;
+    }
+}
+
+.button {
+    // legacy
+    //display: inline-block;
+    display: block;
+    width: $image-width;
+
+    &-primary {
+        @extend .button;
+        background: blueviolet;
+        color: plum;
+    }
+    &-secondary {
+        @extend .button;
+        background: darkmagenta;
+    }
+}
+
 
 @import "screen-size";

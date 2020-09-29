@@ -1,14 +1,6 @@
-@include smallScreen {
-    main {
-
-        h1 {
-            color: hotpink;
-            //padding-top: 5vh;
-        }
-    }
-}
-
-
+//the medium screen definitions include stuff that should also apply to small screens,
+//so the medium screen goes before the small screen
+//to prevent it from overriding the properties that the small screen should have
 @include mediumScreen {
     main {
         align-items: center;
@@ -55,12 +47,34 @@
             "grid-item-3";
         grid-template-columns: 1fr;
     }
+    
+    .my-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include smallScreen {
+    main {
+
+        h1 {
+            color: hotpink;
+            //padding-top: 5vh;
+        }
+    }
+
+    .my-projects {
+        grid-template-columns: 1fr;
+    }
 }
 
 @include largeScreen {
-    //No large screens here, I guess
+    .my-projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @include hugeScreen {
-    //None of these either
+    .my-projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

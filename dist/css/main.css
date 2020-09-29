@@ -153,9 +153,27 @@ footer {
   bottom: 0;
   width: 100%; }
 
-@media screen and (max-width: 520px) {
-  main h1 {
-    color: hotpink; } }
+.my-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem; }
+  .my-projects .project-image {
+    color: violet;
+    background: #7a0042;
+    border: 2px darkorange solid; }
+    .my-projects .project-image:hover {
+      border: 2px orange solid; }
+  .my-projects .project-item {
+    justify-self: center; }
+
+.button, .button-primary, .button-secondary {
+  display: block;
+  width: 200px; }
+  .button-primary {
+    background: blueviolet;
+    color: plum; }
+  .button-secondary {
+    background: darkmagenta; }
 
 @media screen and (max-width: 940px) {
   main {
@@ -179,4 +197,20 @@ footer {
       height: 100px; }
   .information {
     grid-template-areas: "portrait-template" "additional-information" "grid-item-1" "grid-item-2" "grid-item-3";
+    grid-template-columns: 1fr; }
+  .my-projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 520px) {
+  main h1 {
+    color: hotpink; }
+  .my-projects {
     grid-template-columns: 1fr; } }
+
+@media screen and (min-width: 941px) and (max-width: 1600px) {
+  .my-projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 1601px) {
+  .my-projects {
+    grid-template-columns: repeat(4, 1fr); } }
