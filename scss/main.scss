@@ -173,6 +173,7 @@ footer {
     //display: inline-block;
     display: block;
     width: $image-width;
+    text-align: center;
 
     &-primary {
         @extend .button;

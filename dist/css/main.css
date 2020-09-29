@@ -168,7 +168,8 @@ footer {
 
 .button, .button-primary, .button-secondary {
   display: block;
-  width: 200px; }
+  width: 200px;
+  text-align: center; }
   .button-primary {
     background: blueviolet;
     color: plum; }

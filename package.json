@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive styles on a static front end",
   "main": "index.js",
+  "homepage": "https://banaanihillo.github.io/lut-frontend",
   "scripts": {
     "sass": "cross-env node-sass scss/ -o dist/css/ --recursive --usePolling --polling-interval 500",
     "hello": "echo Hello!"
