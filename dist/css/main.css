@@ -175,6 +175,19 @@ footer {
   .button-secondary {
     background: darkmagenta; }
 
+.contact-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .contact-information div {
+    margin: 1rem 2rem 1rem 2rem;
+    outline: 2px deeppink solid;
+    padding: 1rem; }
+    .contact-information div:hover {
+      outline-color: #ff47aa; }
+  .contact-information-title {
+    color: #e00079; }
+
 @media screen and (max-width: 940px) {
   main {
     align-items: center;
